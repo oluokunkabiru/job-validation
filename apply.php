@@ -279,4 +279,39 @@ if(isset($_POST['advanceinfo'])){
 }
 
 
+
+// login details
+
+if(isset($_POST['login'])){
+    
+    if(empty(testinput($_POST['email']))){
+        array_push($error,'Please Your Email');
+    }
+    if(empty(testinput($_POST['password']))){
+        array_push($error,'Please Your Password');
+    }
+    if (!filter_var($_POST["email"], FILTER_VALIDATE_EMAIL)) {
+    array_push($error, "Please enter valid email");
+    }
+    foreach($error as $errors){
+        echo $errors .'<br>';
+    }
+
+    $email = "admin@admin.admin";
+    $password = "admin123admin@vb";
+    if(testinput($_POST['email'])==$email && testinput($_POST['password'])==$password){
+        $_SESSION['admin']=$email;
+        echo $_SESSION['admin'];
+
+        echo '<script>
+        setInterval(function(){
+            location.assign("admin.php");
+        }, 500);
+            </script>';
+
+
+    }else{
+        echo "Wrong Email or Password, Please try again";
+    }
+}
 ?>

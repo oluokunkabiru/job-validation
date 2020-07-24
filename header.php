@@ -17,7 +17,7 @@
     <div class="collapse navbar-collapse" id="collapsibleNavbar">
       <ul class="navbar-nav ml-auto">
         <li class="nav-item">
-          <a class="nav-link" href="#">Home</a>
+          <a class="nav-link" href="index.php">Home</a>
         </li>
         <li class="nav-item">
           <a class="nav-link" href="#">About Us</a>
@@ -28,6 +28,11 @@
         <li class="nav-item">
           <a class="nav-link" href="#">Contact Us</a>
         </li>
+
+        <li class="nav-item">
+          <a class="nav-link" href="#login" data-toggle="modal">Login</a>
+        </li>
+
       </ul>
     </div>
   </nav> 

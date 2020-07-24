@@ -1,5 +1,8 @@
-<?php include('header.php');
+<?php 
+session_start();
+include('header.php');
 include('db/db.php');
+if(isset($_SESSION['admin'])){
 
 ?>
 <!DOCTYPE html>
@@ -51,7 +54,7 @@ include('db/db.php');
                 <td>'.$applicant['phone'].'</td>
                 <td><a href="upload/'.$nid.'" download>'.$nid.'</a> </td>
                 <td><a href="upload/'.$cv.'" download>'.$cv.'</a> </td>
-                <td><a href="detail.php?applicant="'.$id.'">View More</a> </td>
+                <td><a href="detail.php?applicant='.$id.'">View More</a> </td>
                 </tr>';
             }
         ?>
@@ -69,4 +72,11 @@ include('db/db.php');
     </div>
 </body>
 </html>
-<?php include('footer.php'); ?>
+<?php include('footer.php'); 
+
+        }
+        
+        else{
+            
+            header('location:index.php');
+        }?>

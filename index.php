@@ -63,6 +63,40 @@
           <div class="col-md-3"></div>
       </div>
   </div>
+  <!-- The Modal -->
+<div class="modal" id="login">
+    <div class="modal-dialog">
+      <div class="modal-content">
+  
+        <!-- Modal Header -->
+        <div class="modal-header">
+          <h4 class="modal-title"><h3 class="text-center font-weight-bold">Admin Login</h3></h4>
+          <button type="button" class="btn btn-danger"  data-dismiss="modal">&times;</button>
+        </div>
+  
+        <!-- Modal body -->
+        <div class="modal-body">
+            <p class="loginerror text-danger"></p>
+            <form action="" id="adminlogin">
+                <div class="form-group"> 
+                    <label for="usr">Email</label>
+                    <input type="email" class="form-control" id="usr" name="email"  placeholder="Email">
+                </div>
+               
+                <div class="form-group">
+                    <label for="">Password</label>
+                    <input type="password" class="form-control" id="usr" name="password" placeholder="Password">
+                </div>
+               <input type="hidden" value="login" name="login">
+                <button class="btn btn-primary btn-block btn-lg" id="loginbtn" name="basickbtn">Login</button>
+            </form>
+        
+        </div>
+  
+       
+      </div>
+    </div>
+  </div>
 </div>
 </body>
 </html>

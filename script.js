@@ -42,5 +42,25 @@ $.ajax({
 
 event.preventDefault();
 })
+
+
+// admin Login
+ // basic form
+ $('#loginbtn').click(function(event){
+    event.preventDefault();
+$.ajax({
+    type:'POST',
+    url: 'apply.php',
+    data: $('#adminlogin').serialize(),
+    success: function (data) {
+    var result=data;
+    $(".loginerror").html(result);
+        
+    
+    }
+});
+
+})
+
     
 })
