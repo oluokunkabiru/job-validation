@@ -28,10 +28,10 @@ foreach($names as $na){
           <div class="col-md-6">
               <div class="card">
                   <div class="card-header"><h3 class="font-weight-bold text-center">Application Form</h3></div>
-                  <div class="card-body">
-                      <h3><i>Deal </i><?php $name ?>, Thanks for Applying this job.</h3>
+                  <div class="card-body text center">
+                      <h5><i>Dear </i> <b><?php echo $name ?></b>, Thanks for Applying this job.</h5>
                       <h4>We will get back to you </h4>
-                      <a href="#view" class="btn btn-primary text-center">View Your details</a>
+                      <a href="#view" class="btn btn-primary text-center" data-toggle="collapse">View Your details</a>
                   </div>
                 </div>
 
@@ -39,40 +39,28 @@ foreach($names as $na){
 
           <div class="col-md-3"></div>
       </div>
+
+      <!-- The Modal -->
+  <div id="view" class="collapse card">
+      <div class="card-title"> <h3 class="text-center"><?php echo $name?> Info</h3></div>
+      <div class="card-body">
+      <h4>Address : <?php echo $applicant['address'] ?></h4>
+      <h4>City : <?php echo $applicant['city'] ?></h4>
+      <h4>State : <?php echo $applicant['state'] ?></h4>
+      <h4>Country : <?php echo $applicant['country'] ?></h4>
+      <h4>Email : <?php echo $applicant['email'] ?></h4>
+      <h4>Phone Number : <?php echo $applicant['phone'] ?></h4>
+      <h4>BVN : <?php echo $applicant['bvn'] ?></h4>
+      <h4>National ID : <a href="upload/<?php echo $applicant['nationalid']?>" download><?php echo $applicant['nationalid']?></a> </h4>
+      <h4>CV : <a href="upload/<?php echo $applicant['cv']?>" download><?php echo $applicant['cv']?></a> </h4>
+      <h4>Gender : <?php echo $applicant['gender'] ?></h4>
+      <h4>Date Apply : <?php echo $applicant['reg_date'] ?></h4>
+      
+      </div>
+
+    </div> 
   </div>
-  <!-- The Modal -->
-<div class="modal" id="whybvn">
-  <div class="modal-dialog">
-    <div class="modal-content">
-
-      <!-- Modal Header -->
-      <div class="modal-header">
-        <h4 class="modal-title">Why Do We Request For Your BVN?</h4>
-        <button type="button" class="close" data-dismiss="modal">&times;</button>
-      </div>
-
-      <!-- Modal body -->
-      <div class="modal-body">
-        <p>
-            This day people have given false information about themselves and its only through your 
-            BVN and national Identifiacation we can surely know more about you before you can be consider
-            for this job.
-        </p>
-        <p>
-            We have experience many false information provided by applicate many times without numbers 
-            and we come up with getting to know more about you through this procedure.
-        </p>
-        <p class="float-right"><b><i>Thanks for your understanding</i></b></p>
-      </div>
-
-      <!-- Modal footer -->
-      <div class="modal-footer">
-        <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
-      </div>
-
-    </div>
-  </div>
-</div>
+  
 
 </div>
 </body>

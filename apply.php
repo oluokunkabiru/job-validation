@@ -151,7 +151,7 @@ if(isset($_POST['advanceinfo'])){
                         $imageFileType = strtolower(pathinfo($target_file,PATHINFO_EXTENSION));
                         // Check if image file is a actual image or fake image
                         // echo $imageFileType."<br>";
-                        $nationalid =$target_dir. $_POST['name'] ." (".$time.").".$imageFileType;
+                        $nationalid =$_POST['name'] ." (".$time.").".$imageFileType;
                         // echo "<br> $newName <br>";
                         if(!empty($imageFileType)){
                             $check = getimagesize($_FILES["nationalid"]["tmp_name"]);
@@ -203,7 +203,7 @@ if(isset($_POST['advanceinfo'])){
                                     $imageFileType = strtolower(pathinfo($target_file,PATHINFO_EXTENSION));
                                     // Check if image file is a actual image or fake image
                                     // echo $imageFileType."<br>";
-                                    $cv =$target_dir. $_POST['name'] ." (".$time.").".$imageFileType;
+                                    $cv =$_POST['name'] ." (".$time.").".$imageFileType;
                                     // echo "<br> $newName <br>";
                                     if(!empty($imageFileType)){
                                         // $check = getimagesize($_FILES["cv"]["tmp_name"]);
